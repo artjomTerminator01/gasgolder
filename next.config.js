@@ -4,7 +4,12 @@ const nextConfig = {
     prependData: `@import "src/styles/utils/_variables.scss";`,
   },
   images: {
-    domains: ['drive.google.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
+      },
+    ],
   },
 };
 
