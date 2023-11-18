@@ -10,7 +10,7 @@ import classes from './_gallery.module.scss';
 const { slider, slidesWrapper, imageWrapper, navigation, rotated, navButton } = classes;
 
 interface GalleryProps {
-  images: StaticImageData[];
+  images: string[];
   type?: string;
   slidePercentageWidth?: number;
   mobileModifier?: number;
@@ -107,7 +107,7 @@ const Gallery: React.FC<GalleryProps> = ({
               width: `${sliderFullWidth}px`,
             }}
           >
-            {images.map((image: StaticImageData, index: number) => (
+            {images.map((image: string, index: number) => (
               <div key={index}>
                 <Image
                   src={image}

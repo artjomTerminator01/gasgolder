@@ -28,7 +28,7 @@ const Navbar: FC<NavbarProps> = ({ currentLocale }) => {
               <Image src={logo} width={130} height={60} alt="GasGolder Logo" />
             </Link>
             <div className="d-md-flex d-none flex-row gap-lg-32 justify-content-space-between flex-align-items-center">
-              <LocaleSwitcher currentLocale={currentLocale} />
+              {/* <LocaleSwitcher currentLocale={currentLocale} /> */}
               {navLinks.map((navlink, index) => (
                 <Link href={navlink.href} key={index} className="text-decoration-none">
                   <p className={classNames(navbarText, 'text-gas-black m-0 ')}>{navlink.text}</p>

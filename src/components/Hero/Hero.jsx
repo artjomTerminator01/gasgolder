@@ -50,7 +50,12 @@ const Hero = () => {
           </div>
         </div>
         <div className="d-xl-flex d-none col-xl-4 col-12 flex-align-items-center position-relative py-16">
-          <Image src={conditioner} width={700} height={640} className={heroImage} />
+          <Image
+            src={'https://drive.google.com/uc?export=view&id=1Br5gbfulSvAvPecWnryRHGeSH1Ri3-jk'}
+            width={700}
+            height={640}
+            className={heroImage}
+          />
         </div>
       </div>
     </div>
