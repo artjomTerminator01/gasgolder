@@ -1,0 +1,51 @@
+@each $size, $value in $percents {
+  .height-#{$size} {
+    height: $value;
+  }
+
+  .width-#{$size} {
+    width: $value;
+  }
+
+  .min-width-#{$size} {
+    min-width: $value;
+  }
+
+  .max-width-#{$size} {
+    max-width: $value;
+  }
+
+  .min-height-#{$size} {
+    min-height: $value;
+  }
+
+  .max-height-#{$size} {
+    max-height: $value;
+  }
+}
+
+@each $spacing, $value in $spacers {
+  .height-px-#{$spacing} {
+    height: $value;
+  }
+
+  .width-px-#{$spacing} {
+    width: $value;
+  }
+
+  .min-width-px-#{$spacing} {
+    min-width: $value;
+  }
+
+  .max-width-px-#{$spacing} {
+    max-width: $value;
+  }
+
+  .min-height-px-#{$spacing} {
+    min-height: $value;
+  }
+
+  .max-height-px-#{$spacing} {
+    max-height: $value;
+  }
+}

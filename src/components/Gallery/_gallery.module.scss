@@ -1,0 +1,49 @@
+.navigation {
+  width: 100%;
+}
+
+.slider {
+  overflow: hidden;
+  @media screen and (min-width: $breakpoint-md) {
+    padding-left: calc(0.17 * 100vw);
+  }
+}
+
+.slidesWrapper {
+  display: flex;
+  gap: 40px;
+  transition: all 1s;
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: center;
+  @media screen and (max-width: $breakpoint-md) {
+    gap: 8px;
+  }
+}
+
+.imageWrapper {
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.navButton {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 65px;
+  width: 65px;
+  cursor: pointer;
+  background-color: $gold;
+  transition: 0.5s;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+    padding: 16px;
+  }
+}

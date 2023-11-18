@@ -1,0 +1,11 @@
+.navbarText {
+  border-bottom: 2px solid transparent;
+  transition: all 1s;
+  padding-bottom: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  &:hover {
+    color: $gold;
+    border-bottom: 2px solid $gold;
+  }
+}

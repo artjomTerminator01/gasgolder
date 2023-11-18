@@ -1,0 +1,44 @@
+.rectangle {
+  height: 350px;
+  width: 250px;
+  border-radius: 12px;
+  text-wrap: wrap;
+}
+
+.primaryCard {
+  background-color: #8839ef;
+}
+
+.secondaryCard {
+  background-color: #5f98d1;
+}
+
+.tertiaryCard {
+  background-color: #39ef9a;
+}
+
+.primaryText {
+  color: #8839ef;
+}
+
+.secondaryText {
+  color: #5f98d1;
+}
+
+.tertiaryText {
+  color: #39ef9a;
+}
+
+.mainText {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.iconWrapper {
+  bottom: -20px;
+  left: -100px;
+}
+
+.price {
+  font-weight: 700;
+}

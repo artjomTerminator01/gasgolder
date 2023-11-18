@@ -1,0 +1,54 @@
+@each $align in $alignments {
+  .justify-content-#{$align} {
+    justify-content: #{$align};
+  }
+
+  .flex-align-items-#{$align} {
+    align-items: #{$align};
+  }
+
+  .align-self-#{$align} {
+    align-self: #{$align};
+  }
+
+  .justify-items-#{$align} {
+    justify-items: #{$align};
+  }
+
+  .align-content-#{$align} {
+    align-content: #{$align};
+  }
+}
+
+@each $align in $alignments {
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .justify-content-#{$size}-#{$align} {
+        justify-content: #{$align};
+      }
+      .flex-align-items-#{$size}-#{$align} {
+        align-items: #{$align};
+      }
+
+      .align-self-#{$align} {
+        align-self: #{$align};
+      }
+
+      .justify-items-#{$size}-#{$align} {
+        justify-items: #{$align};
+      }
+
+      .align-content-#{$size}-#{$align} {
+        align-content: #{$align};
+      }
+    }
+  }
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}

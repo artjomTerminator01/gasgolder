@@ -1,0 +1,46 @@
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position;
+  }
+}
+
+@each $position in $positions {
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .position-#{$position}-#{$size} {
+        position: $position;
+      }
+    }
+  }
+}
+
+// z-line
+
+@each $value in $layers {
+  .z-index-#{$value} {
+    z-index: $value;
+  }
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+@each $spacing, $value in $spacers {
+  .top-#{$spacing} {
+    top: $value;
+  }
+  .bottom-#{$spacing} {
+    bottom: $value;
+  }
+  .left-#{$spacing} {
+    left: $value;
+  }
+  .right-#{$spacing} {
+    right: $value;
+  }
+}

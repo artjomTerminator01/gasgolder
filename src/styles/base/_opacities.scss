@@ -1,0 +1,15 @@
+@each $opacity, $value in $opacities {
+  .o-#{$opacity} {
+    opacity: $value;
+  }
+}
+
+@each $opacity, $value in $opacities {
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .o-#{$size}-#{$opacity} {
+        opacity: $value;
+      }
+    }
+  }
+}

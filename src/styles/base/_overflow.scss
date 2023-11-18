@@ -1,0 +1,15 @@
+@each $overflow in $overflows {
+  .overflow-#{$overflow} {
+    overflow: $overflow;
+  }
+}
+
+@each $overflow in $overflows {
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .overflow-#{$size}-#{$overflow} {
+        overflow: $overflow;
+      }
+    }
+  }
+}

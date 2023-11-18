@@ -1,0 +1,35 @@
+[
+  {
+    "index": 0,
+    "title": "Daikin Altherma 3 GEO inverter-tüüpi maasoojuspump EGSAH06D9W koos 180 l tarbeveeboileriga",
+    "price": 1000,
+    "description": [
+      { "title": "Küttevõimsus", "value": "7,5 kW" },
+      { "title": "Köetav pind", "value": "kuni 180 m²" },
+      { "title": "Siseosa müratase", "value": "27 dB(A)" },
+      { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" }
+    ],
+    "text": "Daikin Industries on pikkade traditsioonidega Jaapani soojuspumpade tootja. Tippklassi jõudlus ka kõige külmemas kliimas. Daikin Altherma maasoojuspump kasutab maasoojust ja Daikini inverter tehnoloogiat kütmiseks ja sooja vee valmistamiseks igasuguse ilmaga.",
+    "images": [
+      "https://drive.google.com/uc?export=view&id=1MP4rUIoF_zKn4-ioMg5D0m7UnQT360Rl",
+      "https://drive.google.com/uc?export=view&id=1B-wRztWmQwavhPpwuB7rWzMmL-wtgbBJ",
+      "https://drive.google.com/uc?export=view&id=1CuHWwG7kDVeQ2tlqA0bi6cHawdJslTf2"
+    ],
+    "remote": true,
+    "energyClass": "A++"
+  },
+  {
+    "index": 0,
+    "title": "Daikin Altherma 3 GEO inverter-tüüpi maasoojuspump EGSAH06D9W koos 180 l tarbeveeboileriga",
+    "price": 2000,
+    "text": "Daikin Industries on pikkade traditsioonidega Jaapani soojuspumpade tootja. Tippklassi jõudlus ka kõige külmemas kliimas. Daikin Altherma maasoojuspump kasutab maasoojust ja Daikini inverter tehnoloogiat kütmiseks ja sooja vee valmistamiseks igasuguse ilmaga.",
+    "description": [
+      { "title": "Küttevõimsus", "value": "7,5 kW" },
+      { "title": "Köetav pind", "value": "kuni 180 m²" },
+      { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" }
+    ],
+    "images": ["https://drive.google.com/uc?export=view&id=1B-wRztWmQwavhPpwuB7rWzMmL-wtgbBJ"],
+    "remote": true,
+    "energyClass": "A++"
+  }
+]

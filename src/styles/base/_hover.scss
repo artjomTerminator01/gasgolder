@@ -1,0 +1,20 @@
+// example: .hover-background-black
+@each $color, $value in $all-colors {
+  .hover-background-#{$color}:hover {
+    background-color: $value;
+  }
+}
+
+// example: .hover-border-black
+@each $color, $value in $all-colors {
+  .hover-border-#{$color}:hover {
+    border-color: $value;
+  }
+}
+
+// example: .hover-border-bottom-black
+@each $color, $value in $all-colors {
+  .hover-border-bottom-#{$color}:hover {
+    border-bottom: 1px solid $value;
+  }
+}

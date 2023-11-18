@@ -1,0 +1,59 @@
+@each $spacing, $value in $spacers {
+  .border-radius-#{$spacing} {
+    border-radius: $value !important;
+  }
+}
+
+@each $spacing, $value in $spacers {
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .border-radius-#{$size}-#{$spacing} {
+        border-radius: $value;
+      }
+    }
+  }
+}
+
+@each $value, $color in $all-colors {
+  .border-top-#{$value} {
+    border-top: 1px solid $color;
+  }
+}
+
+.border-end-none {
+  border-top-right-radius: 0rem !important;
+  border-bottom-right-radius: 0rem !important;
+}
+
+.border-start-none {
+  border-bottom-left-radius: 0rem !important;
+  border-top-left-radius: 0rem !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-top {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.rounded-end {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.rounded-start {
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
+}

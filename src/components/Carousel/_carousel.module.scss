@@ -1,0 +1,63 @@
+.marqueeContainer {
+  height: 400px; /* Change the height to be determined by content */
+  overflow: hidden;
+  line-height: 30px;
+
+  &:hover .marquee,
+  .tempMarquee {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+
+  .marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  .marqueeBase {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .marquee2 {
+    animation-delay: calc(40s / 2);
+  }
+
+  .tempMarquee {
+    animation: tempmarquee 40s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes tempmarquee {
+  0% {
+    left: -0%;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+.card {
+  width: calc(33.33% - 30px); /* Adjust the width to create a 30px gap between cards */
+  margin-right: 30px;
+  flex: 1;
+  min-width: 0; /* To prevent overflow issues with long content */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}

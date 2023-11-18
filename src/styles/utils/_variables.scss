@@ -1,0 +1,252 @@
+@import './config/_colorsConfig.scss';
+@import './config/_buttonsConfig.scss';
+
+//
+// FONTS
+//
+$helvetica: Helvetica, Arial, sans-serif;
+$fontWeight: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+//
+// SPACINGS
+//
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  2: (
+    $spacer * calc(2 / 16),
+  ),
+  4: (
+    $spacer * calc(4 / 16),
+  ),
+  6: (
+    $spacer * calc(6 / 16),
+  ),
+  8: (
+    $spacer * calc(8 / 16),
+  ),
+  10: (
+    $spacer * calc(10 / 16),
+  ),
+  12: (
+    $spacer * calc(12 / 16),
+  ),
+  14: (
+    $spacer * calc(14 / 16),
+  ),
+  16: (
+    $spacer * calc(16 / 16),
+  ),
+  20: (
+    $spacer * calc(20 / 16),
+  ),
+  24: (
+    $spacer * calc(24 / 16),
+  ),
+  32: (
+    $spacer * calc(32 / 16),
+  ),
+  36: (
+    $spacer * calc(36 / 16),
+  ),
+  40: (
+    $spacer * calc(40 / 16),
+  ),
+  44: (
+    $spacer * calc(44 / 16),
+  ),
+  48: (
+    $spacer * calc(48 / 16),
+  ),
+  52: (
+    $spacer * calc(52 / 16),
+  ),
+  56: (
+    $spacer * calc(56 / 16),
+  ),
+  64: (
+    $spacer * calc(64 / 16),
+  ),
+  72: (
+    $spacer * calc(72 / 16),
+  ),
+  78: (
+    $spacer * calc(78 / 16),
+  ),
+  80: (
+    $spacer * calc(80 / 16),
+  ),
+  86: (
+    $spacer * calc(86 / 16),
+  ),
+  96: (
+    $spacer * calc(96 / 16),
+  ),
+  100: (
+    $spacer * calc(100 / 16),
+  ),
+  108: (
+    $spacer * calc(108 / 16),
+  ),
+  112: (
+    $spacer * calc(112 / 16),
+  ),
+  120: (
+    $spacer * calc(120 / 16),
+  ),
+  128: (
+    $spacer * calc(128 / 16),
+  ),
+  140: (
+    $spacer * calc(140 / 16),
+  ),
+  160: (
+    $spacer * calc(160 / 16),
+  ),
+  168: (
+    $spacer * calc(168 / 16),
+  ),
+  180: (
+    $spacer * calc(180 / 16),
+  ),
+  196: (
+    $spacer * calc(196 / 16),
+  ),
+  200: (
+    $spacer * calc(200 / 16),
+  ),
+  240: (
+    $spacer * calc(240 / 16),
+  ),
+  244: (
+    $spacer * calc(244 / 16),
+  ),
+  254: (
+    $spacer * calc(254 / 16),
+  ),
+  256: (
+    $spacer * calc(256 / 16),
+  ),
+  300: (
+    $spacer * calc(300 / 16),
+  ),
+  384: (
+    $spacer * calc(384 / 16),
+  ),
+  512: (
+    $spacer * calc(512 / 16),
+  ),
+  auto: auto,
+);
+//
+// OPACITIES
+//
+
+$opacity: 1 !default;
+$opacities: (
+  0: 0,
+  10: 0.1,
+  20: 0.2,
+  25: 0.25,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  70: 0.7,
+  80: 0.8,
+  90: 0.9,
+  100: 1,
+);
+
+//
+// BREAKPOINTS
+//
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$breakpoints: (
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl,
+);
+
+//
+// ALIGNMENTS
+//
+
+$alignments: (
+  'center',
+  'space-between',
+  'space-around',
+  'space-evenly',
+  'flex-start',
+  'flex-end',
+  'baseline',
+  'stretch',
+  'auto'
+);
+
+$textAlignments: ('left', 'right', 'center', 'revert');
+
+//
+// DISPLAYS
+//
+
+$displays: (
+  'block',
+  'inline-block',
+  'inline',
+  'grid',
+  'table',
+  'table-row',
+  'table-cell',
+  'flex',
+  'inline-flex',
+  'none'
+);
+
+//
+// FLEX UTILITIES
+//
+
+$flexDirections: ('row', 'column', 'row-reverse', 'column-reverse');
+$flexWraps: ('wrap', 'nowrap', 'wrap-reverse');
+$flexSizes: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+//
+// CURSORS
+//
+
+$cursors: (pointer, help, wait, crosshair, not-allowed, zoom-in, zoom-out, grab, auto);
+
+//
+// WIDTH/HEIGHT
+//
+
+$percents: (
+  100: 100%,
+  90: 90%,
+  80: 80%,
+);
+
+//
+// OVERFLOW
+//
+
+$overflows: (auto, hidden, visible, scroll);
+
+//
+// POSITIONS
+//
+
+$positions: (static, relative, absolute, fixed, sticky);
+$layers: (-1, 0, 1, 2, 3, 4, 5);

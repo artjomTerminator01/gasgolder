@@ -1,0 +1,32 @@
+// BUTTONS
+
+$button-styles: (
+  primary: (
+    // 1 --> text
+    $white,
+    // 2 --> bg
+    $base-black,
+    // 3 --> bg hover
+    $base-black,
+    // 4 --> bg focus
+    $base-black,
+    // 5 --> bg active
+    $base-black,
+    //6  --> bg disabeld
+    $base-black,
+  ),
+  secondary: (
+    // 1 --> text
+    $white,
+    // 2 --> bg
+    $base-black,
+    // 3 --> bg hover
+    $base-black,
+    // 4 --> bg focus
+    $base-black,
+    // 5 --> bg active
+    $base-black,
+    //6  --> bg disabeld
+    $base-black,
+  ),
+);
