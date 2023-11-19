@@ -4,8 +4,8 @@ import Image from 'next/image';
 import React, { FC } from 'react';
 import LocaleSwitcher from '../LocaleSwitcher';
 
-import logo from '../../../../public/assets/logo-black.png';
 import burger from '../../../../public/icons/burger-menu.svg';
+import logo from '../../../../public/assets/logo-black.svg';
 
 import classes from './_navbar.module.scss';
 const { navbarText } = classes;
