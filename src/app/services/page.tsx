@@ -1,7 +1,7 @@
 'use client';
 import { Carousel, Gallery, Hero, Service, ServiceCard } from '@/components';
 import Layout from '@/components/Layout';
-import Image,from 'next/image';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 import hexagon from '../../../public/icons/hexagon.svg';
