@@ -8,6 +8,7 @@ import burger from '../../../../public/icons/burger-menu.svg';
 import logo from '../../../../public/assets/logo-black.svg';
 
 import classes from './_navbar.module.scss';
+import { text } from 'node:stream/consumers';
 const { navbarText } = classes;
 interface NavbarProps {
   currentLocale: string;
@@ -15,10 +16,11 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ currentLocale }) => {
   const navLinks = [
-    { text: 'Tooted', href: '/products' },
-    { text: 'Teenused', href: '/services' },
-    { text: 'Kontakt', href: '#contact' },
+    { text: currentLocale == 'et' ? 'Tooted' : 'Товары', href: '/products' },
+    { text: currentLocale == 'et' ? 'Teenused' : 'Услуги', href: '/services' },
+    { text: currentLocale == 'et' ? 'Kontakt' : 'Контакты', href: '#contact' },
   ];
+
   return (
     <div className="container">
       <div className="row">
@@ -28,7 +30,7 @@ const Navbar: FC<NavbarProps> = ({ currentLocale }) => {
               <Image src={logo} width={130} height={60} alt="GasGolder Logo" />
             </Link>
             <div className="d-md-flex d-none flex-row gap-lg-32 justify-content-space-between flex-align-items-center">
-              {/* <LocaleSwitcher currentLocale={currentLocale} /> */}
+              <LocaleSwitcher currentLocale={currentLocale} />
               {navLinks.map((navlink, index) => (
                 <Link href={navlink.href} key={index} className="text-decoration-none">
                   <p className={classNames(navbarText, 'text-gas-black m-0 ')}>{navlink.text}</p>

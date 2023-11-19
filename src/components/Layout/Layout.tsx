@@ -1,4 +1,3 @@
-import { useParams } from 'next/navigation';
 import React, { FC, ReactNode } from 'react';
 import Footer from './Footer';
 import { Navbar } from './Navbar';

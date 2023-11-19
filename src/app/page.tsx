@@ -1,31 +1,24 @@
-import { Carousel, Gallery, Hero, ServiceCard } from '@/components';
-import Layout from '@/components/Layout';
-import Image, { StaticImageData } from 'next/image';
-import React from 'react';
+'use client';
 
-import homeclimate from '../../public/assets/partners/homeclimate.png';
-import gaspre from '../../public/assets/partners/gaspre.png';
-import propaan from '../../public/assets/partners/propaan.png';
-import vekanor from '../../public/assets/partners/vekanor.png';
-import onninen from '../../public/assets/partners/onninen.png';
-import room from '../../public/assets/room.webp';
+import { Carousel, Gallery, Hero } from '@/components';
+import Layout from '@/components/Layout';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
 import classes from '../styles/pages/_home.module.scss';
+import { getLocale } from '../utils/locale';
+import translations from '../../data/text.json';
 const { goldGradient, blueGradient, whyUsText, imageWrapper } = classes;
 
 export default function Home() {
-  // const dictionary: {
-  //   [key: string]: {
-  //     title: string;
-  //   };
-  // } = {
-  //   ru: {
-  //     title: 'Home page',
-  //   },
-  //   et: {
-  //     title: 'Kodu leht',
-  //   },
-  // };
+  const [currentLocale, setCurrentLocale] = useState('et');
+  // const [texts, setTexts] = useState(translations['et']);
+
+  useEffect(() => {
+    const locale = getLocale();
+    setCurrentLocale(locale);
+    // setTexts(translations[locale]);
+  }, []);
 
   const partners: string[] = [
     '1wymioATMXCkGX8V_0cplTgQPc9pNUUU4',
@@ -39,7 +32,7 @@ export default function Home() {
     <div className="position-relative overflow-hidden z-index-2">
       <div className={goldGradient}></div>
       <div className={blueGradient}></div>
-      <Layout currentLocale={'et'}>
+      <Layout currentLocale={currentLocale}>
         <Hero />
         <div className="container border-top-gold ">
           <div className="row">
