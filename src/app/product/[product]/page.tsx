@@ -3,13 +3,20 @@ import ImageSwitcher from '@/components/ImageSwitcher';
 import Layout from '@/components/Layout';
 import classNames from 'classnames';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import products from '../../../../data/products.json';
 import classes from '../../../styles/pages/_product.module.scss';
+import { getLocale } from '../../../utils/locale';
 const { card, linksWrapper } = classes;
 
 export default async function Product({ params }: { params: { product: number } }) {
   const product = products[params.product];
+  // const [currentLocale, setCurrentLocale] = useState('et');
+
+  // useEffect(() => {
+  //   const locale = getLocale();
+  //   setCurrentLocale(locale);
+  // }, []);
 
   return (
     <Layout currentLocale={'et'}>

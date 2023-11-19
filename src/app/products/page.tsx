@@ -1,30 +1,23 @@
+'use client';
 import { Carousel, Gallery, Hero, Product, Service, ServiceCard } from '@/components';
 import Layout from '@/components/Layout';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import products from '../../../data/products.json';
 
 import classes from '../../styles/pages/_home.module.scss';
-const { goldGradient, blueGradient, serviceIconWrapper } = classes;
-
-import ac from '../../../public/assets/conditioner.png';
+import { getLocale } from '../../utils/locale';
 
 export default function Home() {
-  const dictionary: {
-    [key: string]: {
-      title: string;
-    };
-  } = {
-    ru: {
-      title: 'Home page',
-    },
-    et: {
-      title: 'Kodu leht',
-    },
-  };
+  const [currentLocale, setCurrentLocale] = useState('et');
+
+  useEffect(() => {
+    const locale = getLocale();
+    setCurrentLocale(locale);
+  }, []);
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
-      <Layout currentLocale={'et'}>
+      <Layout currentLocale={currentLocale}>
         <div className="container mb-64">
           <div className="row">
             <div className="col-8">

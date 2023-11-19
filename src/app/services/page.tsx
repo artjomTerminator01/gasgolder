@@ -1,28 +1,24 @@
+'use client';
 import { Carousel, Gallery, Hero, Service, ServiceCard } from '@/components';
 import Layout from '@/components/Layout';
-import Image, { StaticImageData } from 'next/image';
-import React from 'react';
+import Image,from 'next/image';
+import React, { useEffect, useState } from 'react';
 
 import hexagon from '../../../public/icons/hexagon.svg';
 import snowIcon from '../../../public/icons/snow-icon.svg';
 import settings from '../../../public/icons/settings.svg';
 
 import classes from '../../styles/pages/_home.module.scss';
+import { getLocale } from '../../utils/locale';
 const { goldGradient, blueGradient, serviceIconWrapper } = classes;
 
 export default function Home() {
-  const dictionary: {
-    [key: string]: {
-      title: string;
-    };
-  } = {
-    ru: {
-      title: 'Home page',
-    },
-    et: {
-      title: 'Kodu leht',
-    },
-  };
+  const [currentLocale, setCurrentLocale] = useState('et');
+
+  useEffect(() => {
+    const locale = getLocale();
+    setCurrentLocale(locale);
+  }, []);
 
   const services = [
     { icon: hexagon, title: 'Монтаж и обслуживание емкостей LPG' },
@@ -37,7 +33,7 @@ export default function Home() {
     <div className="position-relative overflow-hidden z-index-2">
       {/* <div className={goldGradient}></div>
       <div className={blueGradient}></div> */}
-      <Layout currentLocale={'et'}>
+      <Layout currentLocale={currentLocale}>
         <div className="container">
           <div className="row">
             <div className="col-8">

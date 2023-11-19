@@ -7,17 +7,14 @@ import React, { useEffect, useState } from 'react';
 
 import classes from '../styles/pages/_home.module.scss';
 import { getLocale } from '../utils/locale';
-import translations from '../../data/text.json';
 const { goldGradient, blueGradient, whyUsText, imageWrapper } = classes;
 
 export default function Home() {
   const [currentLocale, setCurrentLocale] = useState('et');
-  // const [texts, setTexts] = useState(translations['et']);
 
   useEffect(() => {
     const locale = getLocale();
     setCurrentLocale(locale);
-    // setTexts(translations[locale]);
   }, []);
 
   const partners: string[] = [
