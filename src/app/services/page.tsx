@@ -33,7 +33,7 @@ export default function Home() {
     <div className="position-relative overflow-hidden z-index-2">
       {/* <div className={goldGradient}></div>
       <div className={blueGradient}></div> */}
-      <Layout currentLocale={currentLocale}>
+      <Layout>
         <div className="container">
           <div className="row">
             <div className="col-8">

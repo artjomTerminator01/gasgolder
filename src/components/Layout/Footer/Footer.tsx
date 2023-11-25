@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, from 'react';
+import React from 'react';
 import Image from 'next/image';
 import vectorImage from '../../../../public/assets/hero-vector-union.svg';
 

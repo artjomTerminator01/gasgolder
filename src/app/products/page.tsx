@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
-      <Layout currentLocale={currentLocale}>
+      <Layout>
         <div className="container mb-64">
           <div className="row">
             <div className="col-8">
