@@ -4,18 +4,13 @@ import { Carousel, Gallery, Hero } from '@/components';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { useLocaleContext } from '../components/LocaleContextProvider/LocaleContextProvider';
 
 import classes from '../styles/pages/_home.module.scss';
-import { getLocale } from '../utils/locale';
 const { goldGradient, blueGradient, whyUsText, imageWrapper } = classes;
 
 export default function Home() {
-  const [currentLocale, setCurrentLocale] = useState('et');
-
-  useEffect(() => {
-    const locale = getLocale();
-    setCurrentLocale(locale);
-  }, []);
+  const { currentLocale, setCurrentLocale } = useLocaleContext();
 
   const partners: string[] = [
     '1wymioATMXCkGX8V_0cplTgQPc9pNUUU4',
@@ -29,7 +24,7 @@ export default function Home() {
     <div className="position-relative overflow-hidden z-index-2">
       <div className={goldGradient}></div>
       <div className={blueGradient}></div>
-      <Layout currentLocale={currentLocale}>
+      <Layout>
         <Hero />
         <div className="container border-top-gold ">
           <div className="row">

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { FC } from 'react';
+import React, from 'react';
 import Image from 'next/image';
 import vectorImage from '../../../../public/assets/hero-vector-union.svg';
 
@@ -7,13 +7,12 @@ import fbLogo from '../../../../public/icons/fb.svg';
 
 import classes from './_footer.module.scss';
 import Link from 'next/link';
+import { useLocaleContext } from '../../LocaleContextProvider/LocaleContextProvider';
 const { wrapper, mapWrapper, contactText, verctorWrapper, bottomBox, goldGradient } = classes;
 
-interface FooterProps {
-  currentLocale: string;
-}
+const Footer = () => {
+  const { currentLocale } = useLocaleContext();
 
-const Footer: FC<FooterProps> = ({ currentLocale }) => {
   return (
     <div id="contact" className={classNames(wrapper, 'background-gas-black py-32 px-lg-128 px-32 position-relative')}>
       <div className={goldGradient}></div>

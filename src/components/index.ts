@@ -8,3 +8,4 @@ export { default as Product } from './Product';
 export { default as ImageSwitcher } from './ImageSwitcher';
 export { default as FormModal } from './FormModal';
 export { default as TechnicalData } from './TechnicalData';
+export { default as LocaleContextProvider } from './LocaleContextProvider';

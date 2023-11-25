@@ -4,15 +4,14 @@ import { Navbar } from './Navbar';
 
 interface LayoutProps {
   children: ReactNode;
-  currentLocale: string;
 }
 
-const Layout: FC<LayoutProps> = ({ children, currentLocale }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <Navbar currentLocale={currentLocale} />
+      <Navbar />
       {children}
-      <Footer currentLocale={currentLocale} />
+      <Footer />
     </>
   );
 };

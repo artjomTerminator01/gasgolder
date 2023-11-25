@@ -3,11 +3,15 @@ import React from 'react';
 import { setLocale } from '../../../utils/locale';
 
 import classNames from 'classnames';
+import { useLocaleContext } from '../../LocaleContextProvider/LocaleContextProvider';
 
-const LocaleSwitcher = ({ isMobile = false, currentLocale = 'et' }: { isMobile?: boolean; currentLocale: string }) => {
+const LocaleSwitcher = ({ isMobile = false }: { isMobile?: boolean }) => {
+  const { currentLocale, setCurrentLocale } = useLocaleContext();
+
   const toggleLocale = () => {
-    currentLocale == 'et' ? setLocale('ru') : setLocale('et');
-    window.location.reload();
+    const locale = currentLocale == 'et' ? 'ru' : 'et';
+
+    setCurrentLocale(locale);
   };
 
   return (

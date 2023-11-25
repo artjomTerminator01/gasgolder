@@ -1,20 +1,19 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { FC } from 'react';
+import React from 'react';
 import LocaleSwitcher from '../LocaleSwitcher';
 
 import burger from '../../../../public/icons/burger-menu.svg';
 import logo from '../../../../public/assets/logo-black.svg';
 
 import classes from './_navbar.module.scss';
-import { text } from 'node:stream/consumers';
+import { useLocaleContext } from '../../LocaleContextProvider/LocaleContextProvider';
 const { navbarText } = classes;
-interface NavbarProps {
-  currentLocale: string;
-}
 
-const Navbar: FC<NavbarProps> = ({ currentLocale }) => {
+const Navbar = () => {
+  const { currentLocale } = useLocaleContext();
+
   const navLinks = [
     { text: currentLocale == 'et' ? 'Tooted' : 'Товары', href: '/products' },
     { text: currentLocale == 'et' ? 'Teenused' : 'Услуги', href: '/services' },
@@ -30,7 +29,7 @@ const Navbar: FC<NavbarProps> = ({ currentLocale }) => {
               <Image src={logo} width={130} height={60} alt="GasGolder Logo" />
             </Link>
             <div className="d-md-flex d-none flex-row gap-lg-32 justify-content-space-between flex-align-items-center">
-              <LocaleSwitcher currentLocale={currentLocale} />
+              <LocaleSwitcher />
               {navLinks.map((navlink, index) => (
                 <Link href={navlink.href} key={index} className="text-decoration-none">
                   <p className={classNames(navbarText, 'text-gas-black m-0 ')}>{navlink.text}</p>
