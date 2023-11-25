@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <div id="contact" className={classNames(wrapper, 'background-gas-black py-32 px-lg-128 px-32 position-relative')}>
-      <div className={goldGradient}></div>
+      {/* <div className={goldGradient}></div> */}
       <Image
         src={vectorImage}
         alt="Gas golder"

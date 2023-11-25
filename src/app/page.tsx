@@ -20,10 +20,15 @@ export default function Home() {
     '13aTjcrDShSe77K20WRSbDtzIJ__NEpSo',
   ];
 
+  const isSafari = () => {
+    const ua = navigator.userAgent.toLowerCase();
+    return ua.includes('safari') && !ua.includes('chrome');
+  };
+
   return (
     <div className="position-relative overflow-hidden z-index-2">
-      <div className={goldGradient}></div>
-      <div className={blueGradient}></div>
+      {/* <div className={goldGradient}></div>
+      <div className={blueGradient}></div> */}
       <Layout>
         <Hero />
         <div className="container border-top-gold ">
