@@ -1,10 +1,10 @@
 'use client';
-import { Carousel, Gallery, Hero, Product, Service, ServiceCard } from '@/components';
+
+import { Product } from '@/components';
 import Layout from '@/components/Layout';
 import React, { useEffect, useState } from 'react';
 import products from '../../../data/products.json';
 
-import classes from '../../styles/pages/_home.module.scss';
 import { getLocale } from '../../utils/locale';
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
                 name={'Daikin Altherma 3 GEO inverter-tüüpi maasoojuspump EGSAH06D9W koos 180 l tarbeveeboileriga'}
                 description={['Küttevõimsus: 7,5 kW']}
                 price={2000}
-                productHref="/product/0"
+                productHref="/product?id=0"
                 remote={true}
                 energyClass="A++"
               />
@@ -46,7 +46,7 @@ export default function Home() {
                 name={'Daikin Altherma 3 GEO inverter-tüüpi maasoojuspump EGSAH06D9W koos 180 l tarbeveeboileriga'}
                 description={['Küttevõimsus: 7,5 kW', ' Köetav pind: kuni 180 m²']}
                 price={2000}
-                productHref="/product/1"
+                productHref="/product?id=1"
                 remote={true}
                 energyClass="A++"
               />

@@ -1,16 +1,18 @@
+'use client';
 import { TechnicalData } from '@/components';
 import ImageSwitcher from '@/components/ImageSwitcher';
 import Layout from '@/components/Layout';
 import classNames from 'classnames';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import products from '../../../../data/products.json';
-import classes from '../../../styles/pages/_product.module.scss';
+import products from '../../../data/products.json';
+import classes from '../../styles/pages/_product.module.scss';
 const { card, linksWrapper } = classes;
+import { useSearchParams } from 'next/navigation';
 
-export default async function Product({ params }: { params: { product: number } }) {
-  const product = products[params.product];
-
+export default function Product() {
+  const searchParams = useSearchParams();
+  const [product, setProduct] = useState(products[searchParams.get('id')]);
   return (
     <Layout>
       <div className="container mb-32">
@@ -41,19 +43,4 @@ export default async function Product({ params }: { params: { product: number } 
       </div>
     </Layout>
   );
-}
-
-export async function generateStaticParams() {
-  try {
-    const params = products.map((product: { index: number }) => {
-      return {
-        productIndex: product.index,
-      };
-    });
-
-    return Promise.resolve(params);
-  } catch (error) {
-    console.error(error);
-    return Promise.resolve([]);
-  }
 }
