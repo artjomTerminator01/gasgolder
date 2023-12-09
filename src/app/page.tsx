@@ -3,27 +3,20 @@
 import { Carousel, Gallery, Hero } from '@/components';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, from 'react';
 import { useLocaleContext } from '../components/LocaleContextProvider/LocaleContextProvider';
 
 import classes from '../styles/pages/_home.module.scss';
 const { goldGradient, blueGradient, whyUsText, imageWrapper } = classes;
 
 export default function Home() {
-  const { currentLocale, setCurrentLocale } = useLocaleContext();
-
   const partners: string[] = [
-    '1wymioATMXCkGX8V_0cplTgQPc9pNUUU4',
-    '1g_wAjEtR2gh4GWAhIIbkTcXNbOe2-wzJ',
-    '16zJDkQiGquxwjLk3UkL_ds4AFJKuytGO',
-    '1_5TmYOAaWCB4QwymFZhy4jmeFaR5hNL3',
-    '13aTjcrDShSe77K20WRSbDtzIJ__NEpSo',
+    'homeclimate.png',
+    'onninen.png',
+    'gaspre.png',
+    'propaan.png',
+    'vekanor.png',
   ];
-
-  const isSafari = () => {
-    const ua = navigator.userAgent.toLowerCase();
-    return ua.includes('safari') && !ua.includes('chrome');
-  };
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
@@ -55,10 +48,13 @@ export default function Home() {
         <Gallery
           currentLocale="et"
           images={[
-            'https://drive.google.com/uc?export=view&id=1X9687ro6h_UNAXFpuEFRr4VAcYO2EJsw',
-            'https://drive.google.com/uc?export=view&id=1d92ELN9PNkejFXo9RqHAae2xTLYv_bxz',
-            'https://drive.google.com/uc?export=view&id=1krlw2Yd987Tj2mpwtfJZW-rjVuWnJPkq',
-            'https://drive.google.com/uc?export=view&id=1zuyzzyEVdY7ywNPgZYoT-2Qs_i1X-TlD',
+            '/assets/room.webp',
+            '/assets/room.webp',
+            '/assets/room.webp',
+            // 'https://drive.google.com/uc?export=view&id=1X9687ro6h_UNAXFpuEFRr4VAcYO2EJsw',
+            // 'https://drive.google.com/uc?export=view&id=1d92ELN9PNkejFXo9RqHAae2xTLYv_bxz',
+            // 'https://drive.google.com/uc?export=view&id=1krlw2Yd987Tj2mpwtfJZW-rjVuWnJPkq',
+            // 'https://drive.google.com/uc?export=view&id=1zuyzzyEVdY7ywNPgZYoT-2Qs_i1X-TlD',
           ]}
         />
         <div className="container border-top-gold mt-64 pt-64"></div>
@@ -69,7 +65,8 @@ export default function Home() {
               {partners.map((image: string, index: number) => (
                 <Image
                   key={index}
-                  src={'https://drive.google.com/uc?export=view&id=' + image}
+                  src={`/assets/partners/${image}`}
+                  // src={'https://drive.google.com/uc?export=view&id=' + image}
                   height={100}
                   width={220}
                   alt="GasGolder partner"
