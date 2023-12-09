@@ -3,20 +3,14 @@
 import { Carousel, Gallery, Hero } from '@/components';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import React, from 'react';
+import React from 'react';
 import { useLocaleContext } from '../components/LocaleContextProvider/LocaleContextProvider';
 
 import classes from '../styles/pages/_home.module.scss';
 const { goldGradient, blueGradient, whyUsText, imageWrapper } = classes;
 
 export default function Home() {
-  const partners: string[] = [
-    'homeclimate.png',
-    'onninen.png',
-    'gaspre.png',
-    'propaan.png',
-    'vekanor.png',
-  ];
+  const partners: string[] = ['homeclimate.png', 'onninen.png', 'gaspre.png', 'propaan.png', 'vekanor.png'];
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
