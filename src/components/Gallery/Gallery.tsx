@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import Image from 'next/image';
 import classNames from 'classnames';
-// import { NavigationButton } from '@/gui-components';
 import arrow from '../../../public/icons/arrow.svg';
 
 import classes from './_gallery.module.scss';
