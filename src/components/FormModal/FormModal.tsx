@@ -41,13 +41,11 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
 
       if (response.ok) {
         console.log('Email sent successfully');
-        // Handle success
       } else {
         throw new Error('Failed to send email');
       }
     } catch (error) {
       console.error(error);
-      // Handle error
     } finally {
       closeModal();
     }

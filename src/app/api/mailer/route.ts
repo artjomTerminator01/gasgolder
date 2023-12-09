@@ -1,8 +1,7 @@
 const nodemailer = require('nodemailer');
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from '../../../../node_modules/next/server';
+import { NextRequest, NextResponse } from '../../../../node_modules/next/server';
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest) {
   const json = await req.json();
   const { name, email, message } = json;
 
@@ -26,7 +25,6 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
     text: message,
   };
 
-  console.log(email);
   const mailOptionsCustomer = {
     from: 'info@gasgolder.ee',
     to: email,
