@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import classes from './_formModal.module.scss';
 const { formWrapper, form, inputWrapper, buttonWrapper } = classes;
 import closeIcon from '../../../public/icons/close-circle.svg';
@@ -18,9 +18,9 @@ interface FormData {
 
 const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: '',
+    name: 'Artjom',
+    email: 'artjomgussev2001@gmail.com',
+    message: 'Test',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -28,10 +28,29 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    closeModal();
-    console.log(formData);
+    try {
+      const response = await fetch('/api/mailer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        // Handle success
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error(error);
+      // Handle error
+    } finally {
+      closeModal();
+    }
   };
 
   return (

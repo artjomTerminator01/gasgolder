@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import classNames from 'classnames';
 // import { NavigationButton } from '@/gui-components';
 import arrow from '../../../public/icons/arrow.svg';
@@ -25,7 +25,6 @@ const Gallery: React.FC<GalleryProps> = ({
   slidePercentageWidth = 2 / 3,
   mobileModifier = 768,
   fullWidth = true,
-  currentLocale = 'et',
   galleryImageAlt = 'devtailor',
 }) => {
   const [elementWidth, setElementWidth] = useState(0);
