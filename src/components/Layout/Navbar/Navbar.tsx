@@ -1,7 +1,8 @@
+'use client';
 import classNames from 'classnames';
 import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import LocaleSwitcher from '../LocaleSwitcher';
 
 import burger from '../../../../public/icons/burger-menu.svg';
@@ -13,7 +14,7 @@ const { navbarText } = classes;
 
 const Navbar = () => {
   const { currentLocale } = useLocaleContext();
-
+  const [showBurger, setShowBurger] = useState(false);
   const navLinks = [
     { text: currentLocale == 'et' ? 'Tooted' : 'Товары', href: '/products' },
     { text: currentLocale == 'et' ? 'Teenused' : 'Услуги', href: '/services' },
@@ -36,12 +37,29 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <div className="d-md-none">
-              <Image src={burger} width={40} height={30} alt="Gagolder" />
+            <div className="d-flex align-items-center d-md-none">
+              <LocaleSwitcher />
+              <Image
+                src={burger}
+                width={40}
+                height={30}
+                alt="Gagolder"
+                className="mt-6"
+                onClick={() => setShowBurger(!showBurger)}
+              />
             </div>
           </div>
         </div>
       </div>
+      {showBurger && (
+        <div className="d-flex justify-content-center align-items-center flex-column d-md-none">
+          {navLinks.map((navlink, index) => (
+            <Link href={navlink.href} key={index} className="text-decoration-none">
+              <p className={classNames(navbarText, 'text-gas-black text-center m-0 ')}>{navlink.text}</p>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

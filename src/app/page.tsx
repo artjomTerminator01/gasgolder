@@ -14,8 +14,6 @@ export default function Home() {
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
-      {/* <div className={goldGradient}></div>
-      <div className={blueGradient}></div> */}
       <Layout>
         <Hero />
         <div className="container border-top-gold ">
@@ -42,13 +40,12 @@ export default function Home() {
         <Gallery
           currentLocale="et"
           images={[
-            '/assets/room.webp',
-            '/assets/room.webp',
-            '/assets/room.webp',
-            // 'https://drive.google.com/uc?export=view&id=1X9687ro6h_UNAXFpuEFRr4VAcYO2EJsw',
-            // 'https://drive.google.com/uc?export=view&id=1d92ELN9PNkejFXo9RqHAae2xTLYv_bxz',
-            // 'https://drive.google.com/uc?export=view&id=1krlw2Yd987Tj2mpwtfJZW-rjVuWnJPkq',
-            // 'https://drive.google.com/uc?export=view&id=1zuyzzyEVdY7ywNPgZYoT-2Qs_i1X-TlD',
+            '/assets/carousel/1.webp',
+            '/assets/carousel/2.webp',
+            '/assets/carousel/3.webp',
+            '/assets/carousel/4.webp',
+            '/assets/carousel/5.webp',
+            '/assets/carousel/6.webp',
           ]}
         />
         <div className="container border-top-gold mt-64 pt-64"></div>
@@ -60,7 +57,6 @@ export default function Home() {
                 <Image
                   key={index}
                   src={`/assets/partners/${image}`}
-                  // src={'https://drive.google.com/uc?export=view&id=' + image}
                   height={100}
                   width={220}
                   alt="GasGolder partner"

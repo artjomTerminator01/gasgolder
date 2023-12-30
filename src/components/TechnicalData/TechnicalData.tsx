@@ -17,7 +17,7 @@ const TechnicalData: React.FC<ProductProps> = ({ title, price, text, description
 
   return (
     <>
-      {showModal && <FormModal closeModal={() => setShowModal(false)} />}
+      {showModal && <FormModal closeModal={() => setShowModal(false)} product={{ title: title }} />}
       <div className="col-lg-6 col-12">
         <h3 className="text-gas-black ml-16">{title}</h3>
         <div className={classNames(pricebox, 'p-16 d-flex justify-content-space-between')}>

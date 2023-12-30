@@ -1,42 +1,34 @@
 'use client';
-import { Carousel, Gallery, Hero, Service, ServiceCard } from '@/components';
+import { Service } from '@/components';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-
-import hexagon from '../../../public/icons/hexagon.svg';
-import snowIcon from '../../../public/icons/snow-icon.svg';
-import settings from '../../../public/icons/settings.svg';
-
+import React from 'react';
 import classes from '../../styles/pages/_home.module.scss';
-import { getLocale } from '../../utils/locale';
-const { goldGradient, blueGradient, serviceIconWrapper } = classes;
+
+import smartHome from '../../../public/assets/services/smartHome.png';
+import climate from '../../../public/assets/services/climate.png';
+import gear from '../../../public/assets/services/gear.png';
+import hammer from '../../../public/assets/services/hammer.png';
+import helmet from '../../../public/assets/services/helmet.png';
+import helmet2 from '../../../public/assets/services/helmet2.png';
+const { serviceIconWrapper } = classes;
 
 export default function Home() {
-  const [currentLocale, setCurrentLocale] = useState('et');
-
-  useEffect(() => {
-    const locale = getLocale();
-    setCurrentLocale(locale);
-  }, []);
-
   const services = [
-    { icon: hexagon, title: 'Монтаж и обслуживание емкостей LPG' },
-    { icon: settings, title: 'Монтаж и обслуживание газовых котлов' },
-    { icon: snowIcon, title: 'Установка кондиционеров' },
-    { icon: hexagon, title: 'Монтаж и обслуживание емкостей LPG' },
-    { icon: settings, title: 'Монтаж и обслуживание газовых котлов' },
-    { icon: snowIcon, title: 'Установка кондиционеров' },
+    { icon: gear, title: 'Монтаж и обслуживание емкостей LPG' },
+    { icon: hammer, title: 'Монтаж и обслуживание газовых котлов' },
+    { icon: helmet, title: 'Монтаж и обслуживание котельных и теплоузлов' },
+    { icon: smartHome, title: 'Монтаж и обслуживание тепловых насосов всех видов' },
+    { icon: helmet2, title: 'Сантехнические работы' },
+    { icon: climate, title: 'Монтаж и обслуживание вентиляционных шахт' },
   ];
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
-      {/* <div className={goldGradient}></div>
-      <div className={blueGradient}></div> */}
       <Layout>
         <div className="container">
           <div className="row">
-            <div className="col-8">
+            <div className="col-lg-8">
               <h1>Teenused</h1>
               <h3>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim
@@ -44,29 +36,29 @@ export default function Home() {
                 temporibus!
               </h3>
             </div>
-            <div className="container border-top-gold mt-64 pt-64"></div>
-            <div className="col-4 offset-2">
+            <div className="container border-top-gold mt-lg-64 mt-32 pt-64"></div>
+            <div className="col-lg-4 offset-lg-2">
               {services.slice(0, 3).map((service, index) => (
                 <div key={index} className="d-flex gap-16 flex-align-items-center">
                   <Image
                     src={service.icon}
                     className={serviceIconWrapper}
-                    height={40}
-                    width={40}
+                    height={150}
+                    width={150}
                     alt="Gasgolder teenus"
                   />
                   <h4>{service.title}</h4>
                 </div>
               ))}
             </div>
-            <div className="col-4">
+            <div className="col-lg-4">
               {services.slice(3, 6).map((service, index) => (
                 <div key={index} className="d-flex gap-16 flex-align-items-center">
                   <Image
                     src={service.icon}
                     className={serviceIconWrapper}
-                    height={40}
-                    width={40}
+                    height={150}
+                    width={150}
                     alt="Gasgolder teenus"
                   />
                   <h4>{service.title}</h4>
@@ -74,7 +66,7 @@ export default function Home() {
               ))}
             </div>
             <div className="container border-top-gold mt-64 pt-64"></div>
-            <div className="d-flex flex-column gap-128 mb-64">
+            <div className="d-flex flex-column gap-lg-128 gap-32 mb-64">
               {services.map((service, index) => (
                 <Service
                   key={index}
@@ -84,7 +76,6 @@ export default function Home() {
               dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae
               temporibus!"
                   index={index}
-                  direction={index % 2 == 0 ? 'left' : 'right'}
                 />
               ))}
             </div>

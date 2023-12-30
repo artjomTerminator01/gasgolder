@@ -1,26 +1,37 @@
 'use client';
 import React, { FormEvent, useState } from 'react';
 import classes from './_formModal.module.scss';
-const { formWrapper, form, inputWrapper, buttonWrapper } = classes;
+const { formWrapper, form, inputWrapper, buttonWrapper, close, loadingWrapper } = classes;
 import closeIcon from '../../../public/icons/close-circle.svg';
 import Image from 'next/image';
 import classNames from 'classnames';
-
+import { useLocaleContext } from '../LocaleContextProvider/LocaleContextProvider';
+import { ThreeCircles } from 'react-loader-spinner';
 interface FormModalProps {
   closeModal: () => void;
+  product: { title: string };
+  isContact?: boolean;
 }
 
 interface FormData {
   name: string;
   email: string;
   message: string;
+  lang: string;
+  productTitle: string;
 }
 
-const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
+const FormModal: React.FC<FormModalProps> = ({ closeModal, product, isContact }) => {
+  const { currentLocale } = useLocaleContext();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
-    name: 'Artjom',
-    email: 'artjomgussev2001@gmail.com',
-    message: 'Test',
+    name: '',
+    email: '',
+    message: `Küsimus ${product.title} kohta.
+
+    `,
+    lang: currentLocale,
+    productTitle: product.title,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,6 +42,7 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const response = await fetch('/api/mailer', {
         method: 'POST',
         headers: {
@@ -41,6 +53,7 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
 
       if (response.ok) {
         console.log('Email sent successfully');
+        setLoading(false);
       } else {
         throw new Error('Failed to send email');
       }
@@ -54,15 +67,28 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
   return (
     <div className={formWrapper}>
       <div className={classNames(form, 'p-32')}>
+        {loading && (
+          <div className={loadingWrapper}>
+            <ThreeCircles
+              visible={true}
+              height="100"
+              width="100"
+              color="#b08401"
+              ariaLabel="three-circles-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          </div>
+        )}
         <Image
           src={closeIcon}
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           onClick={closeModal}
-          className="cursor-pointer mb-16"
+          className={classNames(close, 'cursor-pointer mb-16')}
           alt="close form"
         />
-        <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-space-between height-90">
+        <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-space-between height-90 ">
           <div>
             <div className={inputWrapper}>
               <label htmlFor="name">Nimi:</label>
@@ -74,18 +100,12 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal }) => {
             </div>
             <div className={classNames(inputWrapper, 'mt-32')}>
               <label htmlFor="message">Sõnum:</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
             </div>
           </div>
           <div className={buttonWrapper}>
-            <button className="buttonRounded" type="submit">
-              Submit
+            <button disabled={loading} className="buttonRounded" type="submit">
+              Saata
             </button>
           </div>
         </form>

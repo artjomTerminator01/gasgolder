@@ -1,20 +1,23 @@
 .rectangle {
-  height: 350px;
-  width: 250px;
-  border-radius: 12px;
-  text-wrap: wrap;
+  @media (min-width: $breakpoint-lg) {
+    height: 350px;
+    width: 250px;
+    border-radius: 12px;
+    text-wrap: wrap;
+    position: relative;
+  }
 }
 
 .primaryCard {
-  background-color: #8839ef;
+  background-color: rgba(#8839ef, 0.7);
 }
 
 .secondaryCard {
-  background-color: #5f98d1;
+  background-color: rgba(#5f98d1, 0.7);
 }
 
 .tertiaryCard {
-  background-color: #39ef9a;
+  background-color: rgba(#39ef9a, 0.7);
 }
 
 .primaryText {
@@ -36,7 +39,13 @@
 
 .iconWrapper {
   bottom: -20px;
-  left: -100px;
+  right: -200px;
+  z-index: -1;
+  @media (min-width: $breakpoint-lg) {
+    bottom: -20px;
+    left: -100px;
+    z-index: auto;
+  }
 }
 
 .price {

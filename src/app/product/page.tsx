@@ -9,8 +9,11 @@ import products from '../../../data/products.json';
 import classes from '../../styles/pages/_product.module.scss';
 const { card, linksWrapper } = classes;
 import { useSearchParams } from 'next/navigation';
+import { useLocaleContext } from '../../components/LocaleContextProvider/LocaleContextProvider';
 
 export default function Product() {
+  const { currentLocale } = useLocaleContext();
+
   const [product, setProduct] = useState<{
     index: number;
     title: string;
@@ -28,12 +31,12 @@ export default function Product() {
 
   useEffect(() => {
     const id = searchParams.get('id');
-    const index = id !== null ? parseInt(id, 10) : 0; // Convert to a number, default to 0
-    const product = products[index];
+    const index = id !== null ? parseInt(id, 10) : 0;
+    const product = products[index][currentLocale];
     if (product) {
       setProduct(product);
     }
-  }, [searchParams]);
+  }, [searchParams, currentLocale]);
   return (
     <Layout>
       <div className="container mb-32">
