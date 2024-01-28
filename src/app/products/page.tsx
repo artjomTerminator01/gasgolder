@@ -14,7 +14,7 @@ export default function Home() {
       <Layout>
         <div className="container mb-64">
           <div className="row">
-            <div className="col-8">
+            <div className="col-lg-8">
               <h1>Tooted</h1>
               <h3>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim

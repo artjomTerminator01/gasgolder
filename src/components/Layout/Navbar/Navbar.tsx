@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href={'/'} className="cursor-pointer">
               <Image src={logo} width={130} height={60} alt="GasGolder Logo" />
             </Link>
-            <div className="d-md-flex d-none flex-row gap-lg-32 justify-content-space-between flex-align-items-center">
+            <div className="d-lg-flex d-none flex-row gap-lg-32 justify-content-space-between flex-align-items-center">
               <LocaleSwitcher />
               {navLinks.map((navlink, index) => (
                 <Link href={navlink.href} key={index} className="text-decoration-none">
@@ -37,7 +37,7 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <div className="d-flex align-items-center d-md-none">
+            <div className="d-flex align-items-center d-lg-none">
               <LocaleSwitcher />
               <Image
                 src={burger}
