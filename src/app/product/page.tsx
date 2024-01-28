@@ -5,11 +5,27 @@ import Layout from '@/components/Layout';
 import classNames from 'classnames';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import products from '../../../data/products.json';
 import classes from '../../styles/pages/_product.module.scss';
 const { card, linksWrapper } = classes;
 import { useSearchParams } from 'next/navigation';
 import { useLocaleContext } from '../../components/LocaleContextProvider/LocaleContextProvider';
+interface Product {
+  index: number;
+  title: string;
+  price: number;
+  description: {
+    title: string;
+    value: string;
+  }[];
+  text: string;
+  images: string[];
+  remote: boolean;
+  energyClass: string;
+}
+
+interface Products {
+  [key: string]: Product;
+}
 
 export default function Product() {
   const { currentLocale } = useLocaleContext();
@@ -32,6 +48,8 @@ export default function Product() {
   useEffect(() => {
     const id = searchParams.get('id');
     const index = id !== null ? parseInt(id, 10) : 0;
+    const products: Products[] = require('../../../data/products.json');
+
     const product = products[index][currentLocale];
     if (product) {
       setProduct(product);

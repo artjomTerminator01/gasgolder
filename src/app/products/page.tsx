@@ -3,11 +3,29 @@
 import { Product } from '@/components';
 import Layout from '@/components/Layout';
 import React from 'react';
-import products from '../../../data/products.json';
 import { useLocaleContext } from '../../components/LocaleContextProvider/LocaleContextProvider';
+
+interface Product {
+  index: number;
+  title: string;
+  price: number;
+  description: {
+    title: string;
+    value: string;
+  }[];
+  text: string;
+  images: string[];
+  remote: boolean;
+  energyClass: string;
+}
+
+interface Products {
+  [key: string]: Product;
+}
 
 export default function Home() {
   const { currentLocale } = useLocaleContext();
+  const products: Products[] = require('../../../data/products.json');
 
   return (
     <div className="position-relative overflow-hidden z-index-2">
