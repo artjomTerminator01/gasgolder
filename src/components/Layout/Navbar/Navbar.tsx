@@ -8,17 +8,23 @@ import LocaleSwitcher from '../LocaleSwitcher';
 import burger from '../../../../public/icons/burger-menu.svg';
 import logo from '../../../../public/assets/logo-black.svg';
 
-import classes from './_navbar.module.scss';
+import translations from '../../../../data/text.json';
 import { useLocaleContext } from '../../LocaleContextProvider/LocaleContextProvider';
+
+import classes from './_navbar.module.scss';
 const { navbarText } = classes;
 
 const Navbar = () => {
   const { currentLocale } = useLocaleContext();
   const [showBurger, setShowBurger] = useState(false);
+  const typedTranslations: any = translations;
+
+  const t = typedTranslations[currentLocale].navbar || {};
+
   const navLinks = [
-    { text: currentLocale == 'et' ? 'Tooted' : 'Товары', href: '/products' },
-    { text: currentLocale == 'et' ? 'Teenused' : 'Услуги', href: '/services' },
-    { text: currentLocale == 'et' ? 'Kontakt' : 'Контакты', href: '#contact' },
+    { text: t.products || 'Products', href: '/products' },
+    { text: t.services || 'Services', href: '/services' },
+    { text: t.contact || 'Contact', href: '#contact' },
   ];
 
   return (

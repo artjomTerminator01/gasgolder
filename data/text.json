@@ -1,12 +1,40 @@
 {
   "et": {
     "navbar": {
-      "products": "Tooted"
+      "products": "Tooted",
+      "services": "Teenused",
+      "contact": "Kontakt"
+    },
+    "home": {
+      "ourServices": "Meie teenused",
+      "whyUs": "Miks meie?",
+      "whyUsText": "Kui otsite usaldusväärset partenrit soojuspumpade, ventilatsiooniseadmete ja jahutusseadmete alal, siis olete õiges kohas. Meie kireks teie mugavuse ja säästlikkuse tagamine aastaringselt. Kui otsite usaldusväärset partenrit soojuspumpade, ventilatsiooniseadmete ja jahutusseadmete alal, siis olete õiges kohas. Meie kireks teie mugavuse ja säästlikkuse tagamine aastaringselt.",
+      "partners": "Partnerid"
+    },
+    "hero": {
+      "typedStrings": ["Kütame üle Eesti!", "Meist saabub teie sisekliima unistus", "Teie mugavus, meie missioon"],
+      "description": "Kui otsite usaldusväärset partenrit soojuspumpade, ventilatsiooniseadmete ja jahutusseadmete alal, siis olete õiges kohas. Meie kireks teie mugavuse ja säästlikkuse tagamine aastaringselt.",
+      "servicesButton": "Tutvu teenustega",
+      "productsButton": "Vaata tooteid"
     }
   },
   "ru": {
     "navbar": {
-      "products": "Товары"
+      "products": "Товары",
+      "services": "Услуги",
+      "contact": "Контакты"
+    },
+    "home": {
+      "ourServices": "Наши услуги",
+      "whyUs": "Почему мы?",
+      "whyUsText": "Если вы ищете надежного партнера в области тепловых насосов, вентиляционных установок и охладительных систем, вы находитесь в нужном месте. Наша страсть - обеспечить ваш комфорт и экономичность круглый год. Если вы ищете надежного партнера в области тепловых насосов, вентиляционных установок и охладительных систем, вы находитесь в нужном месте. Наша страсть - обеспечить ваш комфорт и экономичность круглый год.",
+      "partners": "Партнеры"
+    },
+    "hero": {
+      "typedStrings": ["Мы отапливаем всю Эстонию!", "Ваши климатические мечты сбываются", "Ваш комфорт - наша миссия"],
+      "description": "Если вы ищете надежного партнера в области тепловых насосов, вентиляционных установок и охладительных систем, вы находитесь в нужном месте. Наша страсть - обеспечить ваш комфорт и экономичность круглый год.",
+      "servicesButton": "Узнать о услугах",
+      "productsButton": "Смотреть продукты"
     }
   }
 }
