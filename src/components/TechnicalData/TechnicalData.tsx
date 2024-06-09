@@ -1,8 +1,10 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import classes from './_technicalData.module.scss';
 import FormModal from '../FormModal';
+import { useLocaleContext } from '../LocaleContextProvider/LocaleContextProvider';
+
 const { pricebox, desTitle, technicalInfo, priceText } = classes;
 
 interface ProductProps {
@@ -13,6 +15,11 @@ interface ProductProps {
 }
 
 const TechnicalData: React.FC<ProductProps> = ({ title, price, text, description }) => {
+  const { currentLocale } = useLocaleContext();
+
+  const typedTranslations: any = require('../../../data/text.json');
+  const t = typedTranslations[currentLocale]?.technicalData || {};
+
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -22,15 +29,16 @@ const TechnicalData: React.FC<ProductProps> = ({ title, price, text, description
         <h3 className="text-gas-black ml-16">{title}</h3>
         <div className={classNames(pricebox, 'p-16 d-flex justify-content-space-between')}>
           <p className="text-gas-black">
-            Hind: <span className={classNames('text-gold', priceText)}> {price} €</span> {`(sisaldab käibemaksu)`}
+            {t.priceLabel || 'Hind:'} <span className={classNames('text-gold', priceText)}> {price} €</span>{' '}
+            {t.priceSuffix || '(sisaldab käibemaksu)'}
           </p>
           <button className="buttonRounded" onClick={() => setShowModal(true)}>
-            Küsi pakkumist
+            {t.askOffer || 'Küsi pakkumist'}
           </button>
         </div>
         <p className="p-16">{text}</p>
         <div className={classNames(technicalInfo, 'p-16')}>
-          <h3>Tehnilised andmed</h3>
+          <h3>{t.technicalDataTitle || 'Tehnilised andmed'}</h3>
           {description.map((item, index) => (
             <div className="d-flex" key={index}>
               <p className={classNames(desTitle)}>{item.title + ':'}</p>

@@ -27,24 +27,27 @@ export default function Home() {
   const { currentLocale } = useLocaleContext();
   const products: Products[] = require('../../../data/products.json');
 
+  const typedTranslations: any = require('../../../data/text.json');
+
+  const t = typedTranslations[currentLocale]?.productsPage || {};
+
   return (
     <div className="position-relative overflow-hidden z-index-2">
       <Layout>
         <div className="container mb-64">
           <div className="row">
             <div className="col-lg-8">
-              <h1>Tooted</h1>
+              <h1>{t.title || 'Products'}</h1>
               <h3>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim
-                dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae
-                temporibus!
+                {t.description ||
+                  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!'}
               </h3>
             </div>
             <div className="container border-top-gold mt-64 pt-64"></div>
             {products.map((product, index) => {
               const localeProductInfo = product[currentLocale];
               return (
-                <div className="col-12 col-lg-6 col-xl-4 mb-64 height-100">
+                <div className="col-12 col-lg-6 col-xl-4 mb-64 height-100" key={index}>
                   <Product
                     image={localeProductInfo.images[0]}
                     name={localeProductInfo.title}

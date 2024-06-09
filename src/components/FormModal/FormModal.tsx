@@ -1,12 +1,14 @@
 'use client';
 import React, { FormEvent, useState } from 'react';
 import classes from './_formModal.module.scss';
-const { formWrapper, form, inputWrapper, buttonWrapper, close, loadingWrapper } = classes;
 import closeIcon from '../../../public/icons/close-circle.svg';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { useLocaleContext } from '../LocaleContextProvider/LocaleContextProvider';
 import { ThreeCircles } from 'react-loader-spinner';
+
+const { formWrapper, form, inputWrapper, buttonWrapper, close, loadingWrapper } = classes;
+
 interface FormModalProps {
   closeModal: () => void;
   product: { title: string };
@@ -23,13 +25,15 @@ interface FormData {
 
 const FormModal: React.FC<FormModalProps> = ({ closeModal, product, isContact }) => {
   const { currentLocale } = useLocaleContext();
+
+  const typedTranslations: any = require('../../../data/text.json');
+  const t = typedTranslations[currentLocale]?.formModal || {};
+
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    message: `Küsimus ${product.title} kohta.
-
-    `,
+    message: `${product.title}.`,
     lang: currentLocale,
     productTitle: product.title,
   });
@@ -91,21 +95,21 @@ const FormModal: React.FC<FormModalProps> = ({ closeModal, product, isContact })
         <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-space-between height-90 ">
           <div>
             <div className={inputWrapper}>
-              <label htmlFor="name">Nimi:</label>
+              <label htmlFor="name">{t.nameLabel || 'Nimi:'}</label>
               <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
             </div>
             <div className={inputWrapper}>
-              <label htmlFor="email">E-post:</label>
+              <label htmlFor="email">{t.emailLabel || 'E-post:'}</label>
               <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
             <div className={classNames(inputWrapper, 'mt-32')}>
-              <label htmlFor="message">Sõnum:</label>
+              <label htmlFor="message">{t.messageLabel || 'Sõnum:'}</label>
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
             </div>
           </div>
           <div className={buttonWrapper}>
             <button disabled={loading} className="buttonRounded" type="submit">
-              Saata
+              {t.submitButton || 'Saata'}
             </button>
           </div>
         </form>

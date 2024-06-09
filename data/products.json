@@ -98,16 +98,11 @@
   {
     "et": {
       "index": 0,
-      "title": "Bosch Condens 2300iW GC2300iW 24 P 24kW (boiler eraldi)",
+      "title": "De Dietrich ZENA MS 24 (ühekontuuriline, atmosfääriline)",
       "price": 1000,
-      "description": [
-        { "title": "Küttevõimsus", "value": "24 kW" },
-        { "title": "Köetav pind", "value": "kuni 180 m²" },
-        { "title": "Siseosa müratase", "value": "27 dB(A)" },
-        { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" }
-      ],
-      "text": "BOSCH Condens 2300iW Kondensaat-tüüpi gaasikütteseade eramajade ja korterite kütmiseks ning vee soojendamiseks.      ",
-      "images": ["/assets/products/1.png"],
+      "description": [],
+      "text": "Seinakatel ZENA MS 24 on mõeldud kütmiseks ja vee soojendamiseks. Väiksemad mõõtmed ja läbimõeldud katla disain avab laialdasi kasutusvõimalusi.",
+      "images": ["/assets/products/2.png"],
       "remote": true,
       "energyClass": "A++"
     },
@@ -115,16 +110,77 @@
       "index": 0,
       "title": "De Dietrich ZENA MS 24 (одноконтурный, атмосферный)",
       "price": 1000,
-      "description": [
-        { "title": "Мощность нагрева", "value": "24 kW" },
-        { "title": "Нагреваемая поверхность", "value": "до 180 m²" },
-        { "title": "Внутренний уровень шума", "value": "27 dB(A)" },
-        { "title": "Размер (K x L x S)", "value": "1891 x 597 x 666 mm" }
-      ],
+      "description": [],
       "text": "Настенные котлы ZENA MS 24 предназначены для отопления и горячего водоснабжения. Уменьшенные размеры и продуманный дизайн котлов открывает широкие возможности применения.      ",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/2.png"],
       "remote": true,
       "energyClass": "A++"
+    }
+  },
+  {
+    "et": {
+      "index": 0,
+      "title": "De Dietrich ZENA MS 24 FF (ühekontuuriline, turbulaator)",
+      "price": 1000,
+      "description": [],
+      "text": "Seinakatel ZENA MS 24 on mõeldud kütmiseks ja vee soojendamiseks. Väiksemad mõõtmed ja läbimõeldud katla disain avab laialdasi kasutusvõimalusi.",
+      "images": ["/assets/products/2.png"],
+      "remote": true,
+      "energyClass": "A++"
+    },
+    "ru": {
+      "index": 0,
+      "title": "De Dietrich ZENA MS 24 FF (одноконтурный, турбированный)",
+      "price": 1000,
+      "description": [],
+      "text": "Нет описания",
+      "images": ["/assets/products/2.png"],
+      "remote": true,
+      "energyClass": "A++"
+    }
+  },
+  {
+    "et": {
+      "index": 0,
+      "title": "De Dietrich ZENA MS 24 MI (kahekontuuriline, atmosfääriline)",
+      "price": 1000,
+      "description": [],
+      "text": "Seinakatel ZENA MS 24 on mõeldud kütmiseks ja vee soojendamiseks. Väiksemad mõõtmed ja läbimõeldud katla disain avab laialdasi kasutusvõimalusi.",
+      "images": ["/assets/products/2.png"],
+      "remote": true,
+      "energyClass": "A++"
+    },
+    "ru": {
+      "index": 0,
+      "title": "De Dietrich ZENA MS 24 MI (двухконтурный, атмосферный)",
+      "price": 1000,
+      "description": [],
+      "text": "Нет описания",
+      "images": ["/assets/products/2.png"],
+      "remote": true,
+      "energyClass": "A++"
+    }
+  },
+  {
+    "et": {
+      "index": 0,
+      "title": "Daikin Altherma 3 EHVZ04S18EA3V/ERGA04EV 180l tarbeveeboileriga",
+      "price": 1000,
+      "description": [],
+      "text": "Daikin Altherma 3 04S18D6V / ERGA04DV on uue põlvkonna õhk-vesi soojuspump. Oma uuendusliku ja intuitiivse juhtimisega hoiab energiakulud minimaalsed, saavutades hooajaliselt kõrgeima võimaliku energiaklassi, A+++.",
+      "images": ["/assets/products/3.png"],
+      "remote": true,
+      "energyClass": "A++"
+    },
+    "ru": {
+      "index": 0,
+      "title": "Daikin Altherma 3 EHVZ04S18EA3V/ERGA04EV 180l водогрейный котел",
+      "price": 1000,
+      "description": [],
+      "text": "Daikin Altherma 3 04S18D6V / ERGA04DV - это новое поколение воздухо-водяных тепловых насосов от компании Daikin. Благодаря своему инновационному и интуитивному управлению они обеспечивают минимальные затраты на энергию, достигая в сезоне наивысшего возможного класса энергоэффективности - A+++",
+      "images": ["/assets/products/3.png"],
+      "remote": true,
+      "energyClass": "A+++"
     }
   }
 ]

@@ -1,10 +1,11 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import wifi from '../../../public/icons/wifi.svg';
 
 import classes from './_product.module.scss';
 import Link from 'next/link';
+import { useLocaleContext } from '../LocaleContextProvider/LocaleContextProvider';
 const { card, productImage, imageWrapper, priceWrapper, wifiWrapper, link } = classes;
 
 interface ProductProps {
@@ -18,6 +19,8 @@ interface ProductProps {
 }
 
 const Product: FC<ProductProps> = ({ image, name, price, description, productHref, remote, energyClass }) => {
+  const { currentLocale } = useLocaleContext();
+
   return (
     <Link href={productHref} className="text-decoration-none text-gas-black">
       <div className={classNames('p-16 pb-0 text-center position-relative background-white', card)}>
@@ -38,7 +41,9 @@ const Product: FC<ProductProps> = ({ image, name, price, description, productHre
         </div>
         <div className="border-top-gas-black my-16 o-30"></div>
         <div className="d-flex justify-content-space-between">
-          <p className={classNames(link, 'p-0 m-0')}>Vaata lähemalt →</p>
+          <p className={classNames(link, 'p-0 m-0')}>
+            {currentLocale == 'ru' ? 'Смотреть подробнее →' : 'Vaata lähemalt →'}
+          </p>
           <div className="d-flex justify-content-flex-end gap-16">
             {remote && <Image src={wifi} height={20} width={20} alt="remote" className={wifiWrapper} />}
             {energyClass && <p className="p-0 m-0 text-gold">{energyClass}</p>}

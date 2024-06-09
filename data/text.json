@@ -16,6 +16,58 @@
       "description": "Kui otsite usaldusväärset partenrit soojuspumpade, ventilatsiooniseadmete ja jahutusseadmete alal, siis olete õiges kohas. Meie kireks teie mugavuse ja säästlikkuse tagamine aastaringselt.",
       "servicesButton": "Tutvu teenustega",
       "productsButton": "Vaata tooteid"
+    },
+    "footer": {
+      "contactTitle": "Kontaktid",
+      "companyName": "GasGolder OÜ",
+      "regCode": "Rg-kood:",
+      "vatNumber": "KMKR:",
+      "phone": "Telefon:",
+      "email": "E-post:",
+      "openingHours": "Lahtiolekuajad:",
+      "officeLocation": "Kontor ja toodete väljastamine:"
+    },
+    "productsPage": {
+      "title": "Tooted",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!"
+    },
+    "carousel": {
+      "service1Title": "LPG mahutite paigaldus ja hooldus",
+      "service1Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service2Title": "Gaasikatelde paigaldus ja hooldus",
+      "service2Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service3Title": "Katlamajade ja soojussõlmede paigaldus ja hooldus",
+      "service3Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service4Title": "Kõikide soojuspumpade paigaldus ja hooldus",
+      "service4Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service5Title": "Sanitaartehnilised tööd",
+      "service5Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service6Title": "Ventilatsioonikanalite paigaldus ja hooldus",
+      "service6Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+    },
+    "servicesPage": {
+      "title": "Teenused",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!",
+      "services": [
+        { "icon": "gear", "title": "LPG mahutite paigaldus ja hooldus", "text": "" },
+        { "icon": "hammer", "title": "Gaasikatelde paigaldus ja hooldus", "text": "" },
+        { "icon": "helmet", "title": "Katlamajade ja soojussõlmede paigaldus ja hooldus", "text": "" },
+        { "icon": "smartHome", "title": "Kõikide soojuspumpade paigaldus ja hooldus", "text": "" },
+        { "icon": "helmet2", "title": "Sanitaartehnilised tööd", "text": "" },
+        { "icon": "climate", "title": "Ventilatsioonikanalite paigaldus ja hooldus", "text": "" }
+      ]
+    },
+    "technicalData": {
+      "priceLabel": "Hind:",
+      "priceSuffix": "(sisaldab käibemaksu)",
+      "askOffer": "Küsi pakkumist",
+      "technicalDataTitle": "Tehnilised andmed"
+    },
+    "formModal": {
+      "nameLabel": "Nimi:",
+      "emailLabel": "E-post:",
+      "messageLabel": "Sõnum:",
+      "submitButton": "Saata"
     }
   },
   "ru": {
@@ -35,6 +87,58 @@
       "description": "Если вы ищете надежного партнера в области тепловых насосов, вентиляционных установок и охладительных систем, вы находитесь в нужном месте. Наша страсть - обеспечить ваш комфорт и экономичность круглый год.",
       "servicesButton": "Узнать о услугах",
       "productsButton": "Смотреть продукты"
+    },
+    "footer": {
+      "contactTitle": "Контакты",
+      "companyName": "GasGolder OÜ",
+      "regCode": "Рег. код:",
+      "vatNumber": "KMKR:",
+      "phone": "Телефон:",
+      "email": "Эл. почта:",
+      "openingHours": "Часы работы:",
+      "officeLocation": "Офис и выдача товаров:"
+    },
+    "productsPage": {
+      "title": "Товары",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!"
+    },
+    "carousel": {
+      "service1Title": "Монтаж и обслуживание емкостей LPG",
+      "service1Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service2Title": "Монтаж и обслуживание газовых котлов",
+      "service2Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service3Title": "Монтаж и обслуживание котельных и теплоузлов",
+      "service3Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service4Title": "Монтаж и обслуживание тепловых насосов всех видов",
+      "service4Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service5Title": "Сантехнические работы",
+      "service5Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service6Title": "Монтаж и обслуживание вентиляционных шахт",
+      "service6Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+    },
+    "servicesPage": {
+      "title": "Услуги",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem аб rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!",
+      "services": [
+        { "icon": "gear", "title": "Монтаж и обслуживание емкостей LPG", "text": "" },
+        { "icon": "hammer", "title": "Монтаж и обслуживание газовых котлов", "text": "" },
+        { "icon": "helmet", "title": "Монтаж и обслуживание котельных и теплоузлов", "text": "" },
+        { "icon": "smartHome", "title": "Монтаж и обслуживание тепловых насосов всех видов", "text": "" },
+        { "icon": "helmet2", "title": "Сантехнические работы", "text": "" },
+        { "icon": "climate", "title": "Монтаж и обслуживание вентиляционных шахт", "text": "" }
+      ]
+    },
+    "technicalData": {
+      "priceLabel": "Цена:",
+      "priceSuffix": "(включая НДС)",
+      "askOffer": "Запросить предложение",
+      "technicalDataTitle": "Технические данные"
+    },
+    "formModal": {
+      "nameLabel": "Имя:",
+      "emailLabel": "Эл. почта:",
+      "messageLabel": "Сообщение:",
+      "submitButton": "Отправить"
     }
   }
 }

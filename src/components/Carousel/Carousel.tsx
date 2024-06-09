@@ -11,53 +11,64 @@ import hammer from '../../../public/assets/services/hammer.png';
 import helmet from '../../../public/assets/services/helmet.png';
 import helmet2 from '../../../public/assets/services/helmet2.png';
 
+import translations from '../../../data/text.json';
+import { useLocaleContext } from '../LocaleContextProvider/LocaleContextProvider';
+
 const { card, marqueeContainer, marquee, marquee2, tempMarquee, marqueeBase } = classes;
 
 const Carousel = () => {
+  const { currentLocale } = useLocaleContext();
+
+  // Use any to avoid TypeScript errors
+  const typedTranslations: any = translations;
+
+  // Fetch translations based on currentLocale
+  const t = typedTranslations[currentLocale]?.carousel || {};
+
   const arr = [
     {
       index: 1,
-      title: 'Монтаж и обслуживание емкостей LPG',
-      href: '/services',
+      title: t.service1Title || 'Монтаж и обслуживание емкостей LPG',
+      href: '/services#0',
       icon: gear,
-      subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service1Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
     },
     {
       index: 2,
-      title: 'Монтаж и обслуживание газовых котлов',
-      href: '/services',
+      title: t.service2Title || 'Монтаж и обслуживание газовых котлов',
+      href: '/services#1',
       icon: hammer,
-      subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service2Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
     },
     {
       index: 3,
-      title: 'Монтаж и обслуживание котельных и теплоузлов',
-      href: '/services',
+      title: t.service3Title || 'Монтаж и обслуживание котельных и теплоузлов',
+      href: '/services#2',
       icon: helmet,
-      subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service3Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
     },
   ];
   const arr2 = [
     {
       index: 1,
-      title: 'Монтаж и обслуживание тепловых насосов всех видов',
-      href: '/services',
+      title: t.service4Title || 'Монтаж и обслуживание тепловых насосов всех видов',
+      href: '/services#3',
       icon: smartHome,
-      subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service4Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
     },
     {
       index: 2,
-      title: 'Сантехнические работы',
-      href: '/services',
+      title: t.service5Title || 'Сантехнические работы',
+      href: '/services#4',
       icon: helmet2,
-      subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service5Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
     },
     {
       index: 3,
-      title: 'Монтаж и обслуживание вентиляционных шахт',
-      href: '/services',
+      title: t.service6Title || 'Монтаж и обслуживание вентиляционных шахт',
+      href: '/services#5',
       icon: climate,
-      subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service6Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
     },
   ];
   const [removeMarquee2, setRemoveMarquee2] = useState(false);
@@ -98,11 +109,11 @@ const Carousel = () => {
         </div>
       </div>
       <div className="d-flex flex-column align-items-center gap-16 d-lg-none p-16">
-        {arr2.map((cardData) => (
-          <ServiceCard {...cardData} />
+        {arr2.map((cardData, index) => (
+          <ServiceCard {...cardData} key={index} />
         ))}
-        {arr.map((cardData) => (
-          <ServiceCard {...cardData} />
+        {arr.map((cardData, index) => (
+          <ServiceCard {...cardData} key={index} />
         ))}
       </div>
     </>

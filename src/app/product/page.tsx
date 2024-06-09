@@ -63,11 +63,11 @@ export default function Product() {
             <>
               <div className={classNames(linksWrapper, 'd-flex flex-align-items-center gap-16')}>
                 <Link href={'/'} className="text-decoration-none text-gold">
-                  Avaleht
+                  {currentLocale == 'ru' ? 'Главная страница' : 'Avaleht'}
                 </Link>
                 <p>→</p>
                 <Link href={'/products'} className="text-decoration-none text-gold">
-                  Tooted
+                  {currentLocale == 'ru' ? 'Товары' : 'Tooted'}
                 </Link>
                 <p>→</p>
                 <p>{product.title}</p>

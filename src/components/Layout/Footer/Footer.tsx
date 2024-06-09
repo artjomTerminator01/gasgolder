@@ -1,17 +1,26 @@
+'use client';
 import classNames from 'classnames';
 import React from 'react';
 import Image from 'next/image';
-import vectorImage from '../../../../public/assets/hero-vector-union.svg';
+import Link from 'next/link';
 
+import vectorImage from '../../../../public/assets/hero-vector-union.svg';
 import fbLogo from '../../../../public/icons/fb.svg';
 
-import classes from './_footer.module.scss';
-import Link from 'next/link';
+import translations from '../../../../data/text.json';
 import { useLocaleContext } from '../../LocaleContextProvider/LocaleContextProvider';
+
+import classes from './_footer.module.scss';
 const { wrapper, mapWrapper, contactText, verctorWrapper, bottomBox, goldGradient } = classes;
 
 const Footer = () => {
   const { currentLocale } = useLocaleContext();
+
+  // Use any to avoid TypeScript errors
+  const typedTranslations: any = translations;
+
+  // Fetch translations based on currentLocale
+  const t = typedTranslations[currentLocale]?.footer || {};
 
   return (
     <div id="contact" className={classNames(wrapper, 'background-gas-black py-32 px-lg-128 px-32 position-relative')}>
@@ -24,12 +33,12 @@ const Footer = () => {
         className={classNames(verctorWrapper, 'position-absolute ')}
       />
       <div className="container">
-        <h2 className="text-gold m-0 mb-32 text-center">Kontaktid</h2>
+        <h2 className="text-gold m-0 mb-32 text-center">{t.contactTitle || 'Contact'}</h2>
         <div className="row border-top-gold pt-32">
           <div className="col-lg-4 col-md-6 col-12">
             <div className="d-flex flex-column">
               <div className="d-flex flex-align-items-center gap-16">
-                <p className={classNames(contactText, 'text-gold')}>GasGolder OÜ </p>
+                <p className={classNames(contactText, 'text-gold')}>{t.companyName || 'GasGolder OÜ'} </p>
                 <Link
                   href="https://www.facebook.com/gasgolder"
                   target={'_blank'}
@@ -39,11 +48,11 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="d-flex gap-8">
-                <p className={classNames(contactText, 'text-gold')}>Rg-kood: </p>
+                <p className={classNames(contactText, 'text-gold')}>{t.regCode || 'Rg-kood:'} </p>
                 <p className="text-cream-white">16513517</p>
               </div>
               <div className="d-flex gap-8">
-                <p className={classNames(contactText, 'text-gold')}>KMKR: </p>
+                <p className={classNames(contactText, 'text-gold')}>{t.vatNumber || 'KMKR:'} </p>
                 <p className="text-cream-white">EE102502723</p>
               </div>
             </div>
@@ -51,16 +60,16 @@ const Footer = () => {
           <div className="col-lg-4 col-md-6 col-12">
             <div className="d-flex flex-column">
               <div className="d-flex gap-8">
-                <p className={classNames(contactText, 'text-gold')}>Telefon: </p>
+                <p className={classNames(contactText, 'text-gold')}>{t.phone || 'Telefon:'} </p>
                 <p className="text-cream-white">+372 5818 0074</p>
               </div>
               <div className="d-flex gap-8">
-                <p className={classNames(contactText, 'text-gold')}>E-post: </p>
-                <p className="text-cream-white"> info@gasgolder.ee</p>
+                <p className={classNames(contactText, 'text-gold')}>{t.email || 'E-post:'} </p>
+                <p className="text-cream-white">info@gasgolder.ee</p>
               </div>
               <div className="d-flex gap-8">
-                <p className={classNames(contactText, 'text-gold')}>Lahtiolekuajad: </p>
-                <p className="text-cream-white"> E-R 9:00-18:00</p>
+                <p className={classNames(contactText, 'text-gold')}>{t.openingHours || 'Lahtiolekuajad:'} </p>
+                <p className="text-cream-white">E-R 9:00-18:00</p>
               </div>
             </div>
           </div>
@@ -75,8 +84,10 @@ const Footer = () => {
           </div>
           <div className={bottomBox}>
             <div className="d-flex gap-8 flex-column flex-lg-row">
-              <p className={classNames(contactText, 'text-gold')}>Kontor ja toodete väljastamine:</p>
-              <p className="text-cream-white"> Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Narva mnt 46a, 41536 </p>
+              <p className={classNames(contactText, 'text-gold')}>
+                {t.officeLocation || 'Kontor ja toodete väljastamine:'}
+              </p>
+              <p className="text-cream-white">Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Narva mnt 46a, 41536</p>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import classes from './_serviceCard.module.scss';
 import { StaticImageData } from '../../../node_modules/next/image';
+import { useLocaleContext } from '../LocaleContextProvider/LocaleContextProvider';
 const { card, black, white, gold, textBox, iconWrapper, link, linkWhite } = classes;
 
 interface ServiceCardProps {
@@ -14,6 +15,8 @@ interface ServiceCardProps {
   icon: StaticImageData;
 }
 const ServiceCard: FC<ServiceCardProps> = ({ index, title, icon, href, subtitle }) => {
+  const { currentLocale } = useLocaleContext();
+
   return (
     <Link href={href} className="text-decoration-none">
       <div className={classNames(card, index == 1 && black, index == 2 && gold, index == 3 && white)}>
@@ -29,7 +32,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ index, title, icon, href, subtitle 
               index == 2 && linkWhite
             )}
           >
-            Vaata lähemalt →
+            {currentLocale == 'ru' ? 'Смотреть подробнее →' : 'Vaata lähemalt →'}
           </h6>
         </div>
       </div>
