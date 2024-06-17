@@ -4,6 +4,7 @@ const nextConfig = {
     prependData: `@import "src/styles/utils/_variables.scss";`,
   },
   images: {
+    domains: ['https://gasgolder.ee'],
     remotePatterns: [
       {
         protocol: 'https',
