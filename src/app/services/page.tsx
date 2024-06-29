@@ -39,10 +39,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-8">
               <h1>{t.title || 'Teenused'}</h1>
-              <h3>
-                {t.description ||
-                  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!'}
-              </h3>
+              <h3>{t.description} </h3>
             </div>
             <div className="container border-top-gold mt-lg-64 mt-32 pt-64"></div>
             <div className="col-lg-4 offset-lg-2">

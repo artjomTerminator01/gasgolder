@@ -38,10 +38,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-8">
               <h1>{t.title || 'Products'}</h1>
-              <h3>
-                {t.description ||
-                  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!'}
-              </h3>
+              <h3>{t.description} </h3>
             </div>
             <div className="container border-top-gold mt-64 pt-64"></div>
             {products.map((product, index) => {

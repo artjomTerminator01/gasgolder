@@ -29,7 +29,7 @@
     },
     "productsPage": {
       "title": "Tooted",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!"
+      "description": ""
     },
     "carousel": {
       "service1Title": "LPG mahutite paigaldus ja hooldus",
@@ -47,7 +47,7 @@
     },
     "servicesPage": {
       "title": "Teenused",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!",
+      "description": "",
       "services": [
         { "icon": "gear", "title": "LPG mahutite paigaldus ja hooldus", "text": "" },
         { "icon": "hammer", "title": "Gaasikatelde paigaldus ja hooldus", "text": "" },
@@ -100,7 +100,7 @@
     },
     "productsPage": {
       "title": "Товары",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem ab rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!"
+      "description": ""
     },
     "carousel": {
       "service1Title": "Монтаж и обслуживание емкостей LPG",
@@ -118,7 +118,7 @@
     },
     "servicesPage": {
       "title": "Услуги",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime distinctio eos impedit a ipsam enim dolorem аб rerum facilis sit tempore sapiente tenetur deserunt aliquam ea repellat quia, recusandae temporibus!",
+      "description": "",
       "services": [
         { "icon": "gear", "title": "Монтаж и обслуживание емкостей LPG", "text": "" },
         { "icon": "hammer", "title": "Монтаж и обслуживание газовых котлов", "text": "" },
