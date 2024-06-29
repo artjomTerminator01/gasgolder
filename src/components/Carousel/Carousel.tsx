@@ -31,21 +31,21 @@ const Carousel = () => {
       title: t.service1Title || 'Монтаж и обслуживание емкостей LPG',
       href: '/services#0',
       icon: gear,
-      subtitle: t.service1Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service1Subtitle || '',
     },
     {
       index: 2,
       title: t.service2Title || 'Монтаж и обслуживание газовых котлов',
       href: '/services#1',
       icon: hammer,
-      subtitle: t.service2Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service2Subtitle || '',
     },
     {
       index: 3,
       title: t.service3Title || 'Монтаж и обслуживание котельных и теплоузлов',
       href: '/services#2',
       icon: helmet,
-      subtitle: t.service3Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service3Subtitle || '',
     },
   ];
   const arr2 = [
@@ -54,21 +54,21 @@ const Carousel = () => {
       title: t.service4Title || 'Монтаж и обслуживание тепловых насосов всех видов',
       href: '/services#3',
       icon: smartHome,
-      subtitle: t.service4Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service4Subtitle || '',
     },
     {
       index: 2,
       title: t.service5Title || 'Сантехнические работы',
       href: '/services#4',
       icon: helmet2,
-      subtitle: t.service5Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service5Subtitle || '',
     },
     {
       index: 3,
       title: t.service6Title || 'Монтаж и обслуживание вентиляционных шахт',
       href: '/services#5',
       icon: climate,
-      subtitle: t.service6Subtitle || 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+      subtitle: t.service6Subtitle || '',
     },
   ];
   const [removeMarquee2, setRemoveMarquee2] = useState(false);

@@ -80,6 +80,7 @@ const Footer = () => {
               height="250"
               loading="lazy"
               className={mapWrapper}
+              title="Gasgolder kontakt"
             ></iframe>
           </div>
           <div className={bottomBox}>

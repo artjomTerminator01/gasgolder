@@ -33,17 +33,17 @@
     },
     "carousel": {
       "service1Title": "LPG mahutite paigaldus ja hooldus",
-      "service1Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service1Subtitle": "",
       "service2Title": "Gaasikatelde paigaldus ja hooldus",
-      "service2Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service2Subtitle": "",
       "service3Title": "Katlamajade ja soojussõlmede paigaldus ja hooldus",
-      "service3Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service3Subtitle": "",
       "service4Title": "Kõikide soojuspumpade paigaldus ja hooldus",
-      "service4Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service4Subtitle": "",
       "service5Title": "Sanitaartehnilised tööd",
-      "service5Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service5Subtitle": "",
       "service6Title": "Ventilatsioonikanalite paigaldus ja hooldus",
-      "service6Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+      "service6Subtitle": ""
     },
     "servicesPage": {
       "title": "Teenused",
@@ -104,17 +104,17 @@
     },
     "carousel": {
       "service1Title": "Монтаж и обслуживание емкостей LPG",
-      "service1Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service1Subtitle": "",
       "service2Title": "Монтаж и обслуживание газовых котлов",
-      "service2Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service2Subtitle": "",
       "service3Title": "Монтаж и обслуживание котельных и теплоузлов",
-      "service3Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service3Subtitle": "",
       "service4Title": "Монтаж и обслуживание тепловых насосов всех видов",
-      "service4Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service4Subtitle": "",
       "service5Title": "Сантехнические работы",
-      "service5Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+      "service5Subtitle": "",
       "service6Title": "Монтаж и обслуживание вентиляционных шахт",
-      "service6Subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+      "service6Subtitle": ""
     },
     "servicesPage": {
       "title": "Услуги",

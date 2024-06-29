@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="d-xl-flex d-none col-xl-4 col-12 flex-align-items-center position-relative py-16">
-          <Image src={'/assets/hero.png'} width={700} height={640} className={heroImage} />
+          <Image src={'/assets/hero.png'} width={700} height={640} className={heroImage} alt="Gaasikatlad" />
         </div>
       </div>
     </div>
