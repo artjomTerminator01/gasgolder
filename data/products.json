@@ -8,10 +8,11 @@
         { "title": "Küttevõimsus", "value": "15 kW" },
         { "title": "Köetav pind", "value": "kuni 180 m²" },
         { "title": "Siseosa müratase", "value": "27 dB(A)" },
-        { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" }
+        { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" },
+        { "title": "Netokaal", "value": "34kg" }
       ],
       "text": "BOSCH Condens 2300iW Kondensaat-tüüpi gaasikütteseade eramajade ja korterite kütmiseks ning vee soojendamiseks.      ",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/1.png", "/assets/products/1-1.png"],
       "remote": true,
       "energyClass": "A++"
     },
@@ -23,10 +24,11 @@
         { "title": "Мощность нагрева", "value": "15 kW" },
         { "title": "Нагреваемая поверхность", "value": "до 180 m²" },
         { "title": "Внутренний уровень шума", "value": "27 dB(A)" },
-        { "title": "Размер (K x L x S)", "value": "1891 x 597 x 666 mm" }
+        { "title": "Размер (K x L x S)", "value": "1891 x 597 x 666 mm" },
+        { "title": "Вес", "value": "34kg" }
       ],
       "text": "Конденсационный котел — идеальное решение задачи отопления и водоснабжения своего жилья.",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/1.png", "/assets/products/1-1.png"],
       "remote": true,
       "energyClass": "A++"
     }
@@ -43,7 +45,7 @@
         { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" }
       ],
       "text": "BOSCH Condens 2300iW Kondensaat-tüüpi gaasikütteseade eramajade ja korterite kütmiseks ning vee soojendamiseks.      ",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/1.png", "/assets/products/1-1.png"],
       "remote": true,
       "energyClass": "A++"
     },
@@ -58,7 +60,7 @@
         { "title": "Размер (K x L x S)", "value": "1891 x 597 x 666 mm" }
       ],
       "text": "Конденсационный котел — идеальное решение задачи отопления и водоснабжения своего жилья.",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/1.png", "/assets/products/1-1.png"],
       "remote": true,
       "energyClass": "A++"
     }
@@ -75,7 +77,7 @@
         { "title": "Siseosa mõõdud (K x L x S)", "value": "1891 x 597 x 666 mm" }
       ],
       "text": "BOSCH Condens 2300iW Kondensaat-tüüpi gaasikütteseade eramajade ja korterite kütmiseks ning vee soojendamiseks.      ",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/1.png", "/assets/products/1-1.png"],
       "remote": true,
       "energyClass": "A++"
     },
@@ -90,7 +92,7 @@
         { "title": "Размер (K x L x S)", "value": "1891 x 597 x 666 mm" }
       ],
       "text": "Конденсационный котел — идеальное решение задачи отопления и водоснабжения своего жилья.",
-      "images": ["/assets/products/1.png"],
+      "images": ["/assets/products/1.png", "/assets/products/1-1.png"],
       "remote": true,
       "energyClass": "A++"
     }
@@ -100,7 +102,11 @@
       "index": 0,
       "title": "De Dietrich ZENA MS 24 (ühekontuuriline, atmosfääriline)",
       "price": 1000,
-      "description": [],
+      "description": [
+        { "title": "Netokaal", "value": "32kg" },
+        { "title": "Köetav pind", "value": "kuni 240 m²" },
+        { "title": "", "value": "" }
+      ],
       "text": "Seinakatel ZENA MS 24 on mõeldud kütmiseks ja vee soojendamiseks. Väiksemad mõõtmed ja läbimõeldud katla disain avab laialdasi kasutusvõimalusi.",
       "images": ["/assets/products/2.png"],
       "remote": true,
